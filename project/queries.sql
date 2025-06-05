@@ -30,7 +30,8 @@ ORDER BY total_quantity DESC
 LIMIT 3;
 
 --Challenge 4 
---
+--What other insights do you think would add value to the business that can be extracted using at least one of these tables?
+--Pick up to three, and explain why they might be useful and how we can get them. (If more tables are needed, list them.)
 
 -- 1. Revenue Trends Over Time
 
