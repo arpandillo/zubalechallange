@@ -29,4 +29,21 @@ GROUP BY p.category
 ORDER BY total_quantity DESC
 LIMIT 3;
 
+--Challenge 4 
+
+
+-- 1. Revenue Trends Over Time
+
+SELECT created_date, SUM(o.quantity * p.price) AS total_revenue
+FROM orders o
+JOIN products p ON o.product_id = p.id
+GROUP BY created_date
+ORDER BY created_date;
+
+--2. Price Sensitivity by Category
+SELECT p.category,
+       ROUND(CORR(p.price, o.quantity), 2) AS price_quantity_correlation
+FROM orders o
+JOIN products p ON o.product_id = p.id
+GROUP BY p.category;
 
